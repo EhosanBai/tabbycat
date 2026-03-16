@@ -6,7 +6,7 @@ from channels.routing import ChannelNameRouter, ProtocolTypeRouter, URLRouter
 from django.core.asgi import get_asgi_application
 from django.urls import re_path
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.render")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tabbycat.settings.render")
 django.setup()
 
 from actionlog.consumers import ActionLogEntryConsumer # noqa: E402 (has to come after settings)
