@@ -35,6 +35,9 @@ module.exports = defineConfig(({ command }) => {
       outDir: '../static/vue',
       emptyOutDir: true,
       sourcemap: false,
+      minify: false,              // ← NEW: disable minification (big memory saver)
+      cssCodeSplit: false,        // ← NEW: bundle CSS into one file
+      chunkSizeWarningLimit: 2000, // ← NEW: ignore large chunk warnings
       rollupOptions: {
         input: {
           app: path.resolve(templatesRoot, 'js-bundles/main.js'),
@@ -43,6 +46,7 @@ module.exports = defineConfig(({ command }) => {
           entryFileNames: 'js/[name].js',
           chunkFileNames: '[name].js',
           assetFileNames: 'assets/[name][extname]',
+          manualChunks: undefined, // ← NEW: disable auto code-splitting
         },
       },
     },
