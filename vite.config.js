@@ -34,7 +34,7 @@ module.exports = defineConfig(({ command }) => {
     build: {
       outDir: '../static/vue',
       emptyOutDir: true,
-      sourcemap: true,
+      sourcemap: false,
       rollupOptions: {
         input: {
           app: path.resolve(templatesRoot, 'js-bundles/main.js'),
