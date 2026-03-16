@@ -16,6 +16,7 @@ echo "-----> Running dynamic preferences checks"
 python manage.py checkpreferences
 
 echo "-----> Running static asset compilation"
+export NODE_OPTIONS=--max-old-space-size=256   # < NEW LINE
 npm install -g @vue/cli-service-global
 npm install
 npm run build
