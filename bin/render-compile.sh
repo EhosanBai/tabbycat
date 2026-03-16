@@ -4,7 +4,7 @@ set -o errexit
 
 echo "-----> Install dependencies"
 python -m pip install pipenv
-pipenv install --system
+pipenv install --system --deploy --ignore-pipfile
 
 echo "-----> I'm post-compile hook"
 cd ./tabbycat/
