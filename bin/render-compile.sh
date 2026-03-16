@@ -7,9 +7,9 @@ echo "-----> Install pipenv"
 python -m pip install --upgrade pip
 python -m pip install pipenv
 
-echo "-----> Install project dependencies from Pipfile"
-pipenv install --system --deploy --ignore-pipfile || {
-  echo "Pipenv install failed - trying fallback pip install from requirements.txt if exists"
+echo "-----> Install project dependencies from Pipfile (skip python version check)"
+pipenv install --system --deploy --ignore-pipfile --skip-python-version-check || {
+  echo "Pipenv install failed even with skip - trying fallback pip install from requirements.txt if exists"
   if [ -f requirements.txt ]; then
     pip install -r requirements.txt
   else
