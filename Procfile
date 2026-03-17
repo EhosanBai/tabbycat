@@ -5,4 +5,4 @@
 
 # web: honcho -f ProcfileMulti start
 # worker: python manage.py runworker notifications adjallocation venues
-web: pipenv run gunicorn tabbycat.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 120
+#web: pipenv run gunicorn tabbycat.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 120
