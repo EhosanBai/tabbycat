@@ -1840,6 +1840,14 @@
             "markers": "python_version >= '3.9'",
             "version": "==2.5.0"
         },
+        "uvicorn": {
+            "hashes": [
+                "sha256:48c0afd214ceb59340075b4a052ea1ee91c16fbc2a9b1469cca0e54566977b02",
+                "sha256:fd97093bdd120a2609fc0d3abe7d8498d9a688b6e75f0f929fde1bc36fe0e91d"
+            ],
+            "markers": "python_version >= '3.9'",
+            "version": "==0.38.0"
+        },
         "wcwidth": {
             "hashes": [
                 "sha256:4d478375d31bc5395a3c55c40ccdf3354688364cd61c4f6adacaa9215d0b3605",
